@@ -50,7 +50,7 @@ cssSupports('position')
   - `value`: [`String` | `undefined`] css 属性值
 - **返回值** Boolean
 - **描述**
-  判断浏览器是否支持传入的的 css 属性，以及对应的 css 值。如果不传 value 参数，只判断是否支持 css 属性，否则判断是否支持属性与值。
+> 判断浏览器是否支持传入的的 css 属性，以及对应的 css 值。如果不传 value 参数，只判断是否支持 css 属性，否则判断是否支持属性与值。
 
 - **示例**
 
