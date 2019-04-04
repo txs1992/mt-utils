@@ -47,6 +47,8 @@ cssSupports('position')
 
 - [CSS 能力检测](#csssupports-css-能力检测)
 - [判断滚动元素](#isScrollElement-判断滚动元素)
+- [判断对象](#isObject-判断是否是对象)
+- [转换查询字符串](#obj2qs-对象转换查询字符串)
 
 #### cssSupports CSS 能力检测
 
@@ -83,5 +85,41 @@ cssSupports('position', 'sticky')
 
 ```js
 // 判断 body 是否是一个滚动元素。
-isScrollElement(document.body, 'position')
+isScrollElement(document.body, 'vertical')
+```
+
+### isObject 判断是否是对象
+
+- **参数**
+  - `value` : `Obejct`
+- **返回值** Boolean
+- **描述**
+
+  > 根据给定的值，判断是否是对象
+
+- **示例**
+
+```js
+// 判断 body 是否是一个滚动元素。
+isObject({})
+```
+
+### obj2qs 对象转换查询字符串
+
+- **参数**
+  - `obj` : `Obejct`
+  - `first`: `Boolean` 是否添加 `&` 符号，默认不添加
+- **返回值** Boolean
+- **描述**
+
+  > 根据给定的对象将其转换成查询字符串，如果传入的不是对象返回空字符串。
+
+- **示例**
+
+```js
+obj2qs({ a: '10', b: '1' })
+// a=10&b=1
+
+obj2qs({ a: '10', b: '1' }, true)
+// &a=10&b=1
 ```
