@@ -43,6 +43,11 @@ cssSupports('position')
 </script>
 ```
 
+## 功能目录
+
+- [CSS 能力检测](#csssupports-css-能力检测)
+- [判断滚动元素](#isScrollElement-判断滚动元素)
+
 #### cssSupports CSS 能力检测
 
 - **参数**
@@ -50,7 +55,8 @@ cssSupports('position')
   - `value`: [`String` | `undefined`] css 属性值
 - **返回值** Boolean
 - **描述**
-> 判断浏览器是否支持传入的的 css 属性，以及对应的 css 值。如果不传 value 参数，只判断是否支持 css 属性，否则判断是否支持属性与值。
+
+  > 判断浏览器是否支持传入的的 css 属性，以及对应的 css 值。如果不传 value 参数，只判断是否支持 css 属性，否则判断是否支持属性与值。
 
 - **示例**
 
@@ -60,4 +66,22 @@ cssSupports('position')
 
 // 判断是否支持 sticky 定位
 cssSupports('position', 'sticky')
+```
+
+#### isScrollElement 判断滚动元素
+
+- **参数**
+  - `el` : `Element` DOM 元素
+  - `direction`: `String` 水平或者垂直滚动，默认 vertical。
+    - `可选值`: [`vertical`, `horizontal`]
+- **返回值** Boolean
+- **描述**
+
+  > 根据给定的 DOM 元素判断该元素是否是一个滚动元素。
+
+- **示例**
+
+```js
+// 判断 body 是否是一个滚动元素。
+isScrollElement(document.body, 'position')
 ```
