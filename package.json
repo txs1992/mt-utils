@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run lint && rollup -c",
     "lint": "eslint --ext .js src",
-    "format": "prettier --config ./.prettierrc.yaml --write '**/*.{js,bue,css,scss}'",
+    "format": "prettier --config ./.prettierrc.yml --write '**/*.{js,bue,css,scss}'",
     "precommit": "pretty-quick --staged"
   },
   "repository": {
@@ -32,6 +32,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0",
     "rollup-plugin-commonjs": "^9.3.3",
     "rollup-plugin-terser": "^4.0.4"
   }
