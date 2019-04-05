@@ -48,7 +48,7 @@ cssSupports('position')
 - [CSS 能力检测](#csssupports-css-能力检测)
 - [判断滚动元素](#isScrollElement-判断滚动元素)
 - [判断对象](#isObject-判断是否是对象)
-- [转换查询字符串](#obj2qs-对象转换查询字符串)
+- [对象序列化](#obj2qs-对象转换查询字符串)
 
 #### cssSupports CSS 能力检测
 
@@ -58,7 +58,7 @@ cssSupports('position')
 - **返回值** Boolean
 - **描述**
 
-  > 判断浏览器是否支持传入的的 css 属性，以及对应的 css 值。如果不传 value 参数，只判断是否支持 css 属性，否则判断是否支持属性与值。
+  > 判断浏览器是否支持传入的的 css 属性，以及对应的 css 属性值。如果不传 value 参数，只判断是否支持 css 属性，否则判断是否支持属性与值。
 
 - **示例**
 
@@ -100,7 +100,7 @@ isScrollElement(document.body, 'vertical')
 - **示例**
 
 ```js
-// 判断 body 是否是一个滚动元素。
+// 判断传入的值是不是一个对象。
 isObject({})
 ```
 

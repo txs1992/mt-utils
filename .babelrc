@@ -1,0 +1,20 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry",
+        "targets": {
+          "ie": "8"
+        },
+        "spec": true
+      }
+    ]
+  ],
+  "plugins": ["@babel/plugin-external-helpers"],
+  "env": {
+    "production": {
+      "plugins": ["@babel/plugin-external-helpers"]
+    }
+  }
+}
