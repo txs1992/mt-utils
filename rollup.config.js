@@ -1,3 +1,4 @@
+import babel from 'rollup-plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import commonjs from 'rollup-plugin-commonjs'
 
@@ -8,5 +9,11 @@ export default {
     format: 'umd',
     name: 'MtUtils'
   },
-  plugins: [commonjs(), terser()]
+  plugins: [
+    commonjs(),
+    terser(),
+    babel({
+      exclude: 'node_modules/**'
+    })
+  ]
 }
