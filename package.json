@@ -1,6 +1,6 @@
 {
   "name": "mt-utils",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "git remote add origin https://github.com/txs1992/mt-utils.git",
   "main": "lib/index.js",
   "scripts": {
