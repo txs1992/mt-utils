@@ -11,5 +11,5 @@ export default function(obj, first = false, transcoding = true) {
     })
     .join('&')
 
-  return first ? `&${result}` : result
+  return first ? `?${result}` : result
 }
