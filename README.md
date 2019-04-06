@@ -49,6 +49,8 @@ cssSupports('position')
 - [判断对象](#isObject-判断是否是对象)
 - [对象序列化](#obj2qs-对象转换查询字符串)
 - [判断滚动元素](#isScrollElement-判断滚动元素)
+- [获取第一个子级滚动元素](#getScrollElementOfFirstChild-获取第一个子级滚动元素)
+- [获取第一个父级滚动元素](#getScrollElementOfFirstParent-获取第一个父级滚动元素)
 
 #### cssSupports CSS 能力检测
 
@@ -61,6 +63,7 @@ cssSupports('position')
   > 判断浏览器是否支持传入的的 css 属性，以及对应的 css 属性值。如果不传 value 参数，只判断是否支持 css 属性，否则判断是否支持属性与值。
 
 - **示例**
+  [返回目录](#功能目录)
 
 ```js
 // 检测是否支持 position 属性
@@ -85,6 +88,8 @@ cssSupports('position', 'sticky')
 // 判断传入的值是不是一个对象。
 isObject({})
 ```
+
+[返回目录](#功能目录)
 
 ### obj2qs 对象转换查询字符串
 
@@ -121,6 +126,8 @@ obj2qs(
 // 转换结果："?name=mt&age=10&ids=%5B1%2C2%2C3%5D&map=%7B%22a%22%3A%22b%22%2C%22b%22%3A%22c%22%7D"
 ```
 
+[返回目录](#功能目录)
+
 #### isScrollElement 判断滚动元素
 
 - **参数**
@@ -139,6 +146,8 @@ obj2qs(
 isScrollElement(document.body, 'vertical')
 ```
 
+[返回目录](#功能目录)
+
 ### getScrollElementOfFirstChild 获取第一个子级滚动元素
 
 - **参数**
@@ -156,10 +165,7 @@ isScrollElement(document.body, 'vertical')
 getScrollElementOfFirstChild(document.querySelector('.content'), 'vertical')
 ```
 
-```js
-// 判断 body 是否是一个滚动元素。
-isScrollElement(document.body, 'vertical')
-```
+[返回目录](#功能目录)
 
 ### getScrollElementOfFirstParent 获取第一个父级滚动元素
 
@@ -177,3 +183,5 @@ isScrollElement(document.body, 'vertical')
 ```js
 getScrollElementOfFirstParent(document.querySelector('.content'), 'vertical')
 ```
+
+[返回目录](#功能目录)
