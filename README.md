@@ -46,9 +46,9 @@ cssSupports('position')
 ## 功能目录
 
 - [CSS 能力检测](#csssupports-css-能力检测)
-- [判断滚动元素](#isScrollElement-判断滚动元素)
 - [判断对象](#isObject-判断是否是对象)
 - [对象序列化](#obj2qs-对象转换查询字符串)
+- [判断滚动元素](#isScrollElement-判断滚动元素)
 
 #### cssSupports CSS 能力检测
 
@@ -68,24 +68,6 @@ cssSupports('position')
 
 // 判断是否支持 sticky 定位
 cssSupports('position', 'sticky')
-```
-
-#### isScrollElement 判断滚动元素
-
-- **参数**
-  - `el` : `Element` DOM 元素
-  - `direction`: `String` 水平或者垂直滚动，默认 vertical。
-    - `可选值`: [`vertical`, `horizontal`]
-- **返回值** Boolean
-- **描述**
-
-  > 根据给定的 DOM 元素判断该元素是否是一个滚动元素。
-
-- **示例**
-
-```js
-// 判断 body 是否是一个滚动元素。
-isScrollElement(document.body, 'vertical')
 ```
 
 ### isObject 判断是否是对象
@@ -137,4 +119,61 @@ obj2qs(
   true
 )
 // 转换结果："?name=mt&age=10&ids=%5B1%2C2%2C3%5D&map=%7B%22a%22%3A%22b%22%2C%22b%22%3A%22c%22%7D"
+```
+
+#### isScrollElement 判断滚动元素
+
+- **参数**
+  - `el` : `Element` DOM 元素
+  - `direction`: `String` 水平或者垂直滚动，默认 vertical。
+    - `可选值`: [`vertical`, `horizontal`]
+- **返回值** Boolean
+- **描述**
+
+  > 根据给定的 DOM 元素判断该元素是否是一个滚动元素。
+
+- **示例**
+
+```js
+// 判断 body 是否是一个滚动元素。
+isScrollElement(document.body, 'vertical')
+```
+
+### getScrollElementOfFirstChild 获取第一个子级滚动元素
+
+- **参数**
+  - `el` : `Element` DOM 元素
+  - `direction`: `String` 水平或者垂直滚动，默认 vertical。
+    - `可选值`: [`vertical`, `horizontal`]
+- **返回值** [`Element`, `null`]
+- **描述**
+
+  > 根据给定的 DOM 元素，获取距离该元素最近的子级动元素(会一直向下查找到最后一级)，如果该元素的子级元素中没有滚动元素，则返回 null。
+
+- **示例**
+
+```js
+getScrollElementOfFirstChild(document.querySelector('.content'), 'vertical')
+```
+
+```js
+// 判断 body 是否是一个滚动元素。
+isScrollElement(document.body, 'vertical')
+```
+
+### getScrollElementOfFirstParent 获取第一个父级滚动元素
+
+- **参数**
+  - `el` : `Element` DOM 元素
+  - `direction`: `String` 水平或者垂直滚动，默认 vertical。
+    - `可选值`: [`vertical`, `horizontal`]
+- **返回值** [`Element`, `null`]
+- **描述**
+
+  > 根据给定的 DOM 元素，获取距离该元素最近的父级滚动元素(向上查找到最顶级)，如果该元素的父级元素中没有滚动元素，则返回 null。
+
+- **示例**
+
+```js
+getScrollElementOfFirstParent(document.querySelector('.content'), 'vertical')
 ```
