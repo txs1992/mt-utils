@@ -63,7 +63,6 @@ cssSupports('position')
   > 判断浏览器是否支持传入的的 css 属性，以及对应的 css 属性值。如果不传 value 参数，只判断是否支持 css 属性，否则判断是否支持属性与值。
 
 - **示例**
-  [返回目录](#功能目录)
 
 ```js
 // 检测是否支持 position 属性
@@ -72,6 +71,8 @@ cssSupports('position')
 // 判断是否支持 sticky 定位
 cssSupports('position', 'sticky')
 ```
+
+[返回目录](#功能目录)
 
 ### isObject 判断是否是对象
 
