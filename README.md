@@ -51,6 +51,7 @@ cssSupports('position')
 - [判断滚动元素](#isScrollElement-判断滚动元素)
 - [获取第一个子级滚动元素](#getScrollElementOfFirstChild-获取第一个子级滚动元素)
 - [获取第一个父级滚动元素](#getScrollElementOfFirstParent-获取第一个父级滚动元素)
+- [获取周的最后一天](#getEndDateOfWeek-获取周的最后一天)
 
 #### cssSupports CSS 能力检测
 
@@ -183,6 +184,24 @@ getScrollElementOfFirstChild(document.querySelector('.content'), 'vertical')
 
 ```js
 getScrollElementOfFirstParent(document.querySelector('.content'), 'vertical')
+```
+
+[返回目录](#功能目录)
+
+### getEndDateOfWeek 获取周的最后一天
+
+- **参数**
+  - `date` : `Date` 日期对象
+  - `startDay`: `Number` 周的开始日期，国内是从周一开始，而国外是从周末开始。
+- **返回值** `Date`
+- **描述**
+
+  > 根据给定的日期对象返回当前周的最后一天
+
+- **示例**
+
+```js
+getEndDateOfWeek(new Date())
 ```
 
 [返回目录](#功能目录)
