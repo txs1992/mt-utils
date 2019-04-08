@@ -4,7 +4,7 @@
   "description": "git remote add origin https://github.com/txs1992/mt-utils.git",
   "main": "lib/index.js",
   "scripts": {
-    "build": "npm run lint && rollup -c",
+    "build": "yarn lint && rollup -c",
     "lint": "eslint --ext .js src",
     "format": "prettier --config ./.prettierrc.yml --write '**/*.{js,bue,css,scss}'",
     "precommit": "pretty-quick --staged"
@@ -24,7 +24,6 @@
   "homepage": "https://github.com/txs1992/mt-utils#readme",
   "dependencies": {
     "@babel/core": "^7.4.3",
-    "@babel/plugin-external-helpers": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "core-js": "2",
     "eslint": "^5.16.0",
