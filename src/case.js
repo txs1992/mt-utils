@@ -6,6 +6,6 @@ export function camelToKebab(str) {
 
 export function kebabToCamel(str) {
   return str.replace(/(^\w)|(-(\w){1})/g, ($1, _, __, $4) =>
-    ($4 ? $4 : $1).toLocaleUpperCase()
+    ($4 || $1).toLocaleUpperCase()
   )
 }

@@ -5,7 +5,7 @@ import getEndDateOfWeek from './get-end-date-of-week.js'
 import isScrollElement from './is-scroll-element.js'
 import getScrollElementOfFirstChild from './get-scroll-element-of-first-child.js'
 import getScrollElementOfFirstParent from './get-scroll-element-of-first-parent.js'
-import { camelToKebab, kebabToCamel } from './case.j'
+import { camelToKebab, kebabToCamel } from './case.js'
 
 export default {
   obj2qs,
