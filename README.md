@@ -52,6 +52,8 @@ cssSupports('position')
 - [获取第一个子级滚动元素](#getScrollElementOfFirstChild-获取第一个子级滚动元素)
 - [获取第一个父级滚动元素](#getScrollElementOfFirstParent-获取第一个父级滚动元素)
 - [获取周的最后一天](#getEndDateOfWeek-获取周的最后一天)
+- [驼峰转短横线](#camelToKebab-驼峰转短横线)
+- [短横线转驼峰](#kebabToCamel-短横线转驼峰)
 
 #### cssSupports CSS 能力检测
 
@@ -202,6 +204,40 @@ getScrollElementOfFirstParent(document.querySelector('.content'), 'vertical')
 
 ```js
 getEndDateOfWeek(new Date())
+```
+
+[返回目录](#功能目录)
+
+### camelToKebab 驼峰转短横线
+
+- **参数**
+  - `str` : `String` 需要转换的字符串
+- **返回值** `String`
+- **描述**
+
+  > 根据给定的驼峰格式字符串返回短横线格式字符串
+
+- **示例**
+
+```js
+camelToKebab('mt-utils') // 返回 MtUtils
+```
+
+[返回目录](#功能目录)
+
+### kebabToCamel 短横线转驼峰
+
+- **参数**
+  - `str` : `String` 需要转换的字符串
+- **返回值** `String`
+- **描述**
+
+  > 根据给定的短横线格式字符串返回驼峰格式字符串
+
+- **示例**
+
+```js
+kebabToCamel('MtUtils') // 返回 mt-utils
 ```
 
 [返回目录](#功能目录)
