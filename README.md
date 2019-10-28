@@ -220,7 +220,7 @@ getEndDateOfWeek(new Date())
 - **示例**
 
 ```js
-camelToKebab('mt-utils') // 返回 MtUtils
+camelToKebab('MtUtils') // 返回 mt-utils
 ```
 
 [返回目录](#功能目录)
@@ -237,7 +237,7 @@ camelToKebab('mt-utils') // 返回 MtUtils
 - **示例**
 
 ```js
-kebabToCamel('MtUtils') // 返回 mt-utils
+kebabToCamel('mt-utils') // 返回 MtUtils
 ```
 
 [返回目录](#功能目录)
